@@ -9,7 +9,7 @@ const fillPlayers = require('./../database/initialize_database/fill_players.js')
 var app = express();
 var port = process.env.PORT || 3000;
 
-fillPlayers.addPlayers();
+// fillPlayers.addPlayers();
 
 app.use(bodyParser.json());
 
@@ -61,15 +61,15 @@ app.get('/players/:name', (req, res) => {
 });
 
 //Use this route to delete duplicates in players collection
-// app.delete('/players/:id', (req, res) => {
-//   var id = req.params.id;
-//
-//   Player.findByIdAndRemove(id).then((doc) => {
-//     res.send(doc);
-//   }, (err) => {
-//     res.send(err);
-//   });
-// });
+app.delete('/players/:id', (req, res) => {
+  var id = req.params.id;
+
+  Player.findByIdAndRemove(id).then((doc) => {
+    res.send(doc);
+  }, (err) => {
+    res.send(err);
+  });
+});
 
 
  app.listen(port,() => {
