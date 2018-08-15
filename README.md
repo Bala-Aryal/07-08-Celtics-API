@@ -17,7 +17,7 @@ A RESTful API that returns rich data about 2007-2008 champion Boston Celtics bas
  List of player short names:
  
 * allen
-* allen0ne
+* allenone
 * brown
 * cassell
 * davis
