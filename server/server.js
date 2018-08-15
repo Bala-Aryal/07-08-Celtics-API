@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('./../database/mongoose.js').mongoose;
 const Player = require('./../database/models/player.js').Player;
 const Game = require('./../database/models/games.js').Game;
+const General = require('./../database/models/general.js').General;
 const fillPlayers = require('./../database/initialize_database/fill_players.js');
 const fillGames = require('./../database/initialize_database/fill_results.js');
+const fillGeneral = require('./../database/initialize_database/fill_general.js');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -15,13 +17,9 @@ var port = process.env.PORT || 3000;
 
 fillGames.addResults();
 
+// fillGeneral.addGeneral();
+
 app.use(bodyParser.json());
-
-app.use('/players/:name', (req, res, next) => {
-  req.params.name = req.params.name.toLowerCase();
-  next();
-});
-
 
 app.get('/players', (req, res) => {
   Player.find().then((players) => {
@@ -40,27 +38,28 @@ app.get('/players', (req, res) => {
 
 app.get('/players/:name', (req, res) => {
   var playerName = req.params.name.toLowerCase();
-  Player.findOne({popularName: playerName}).then((player) => {
-      if(!player)
-      {
-        res.status(404).send({
-          status: 404,
-          errorMessage: 'Could not find specified player in database',
-          errorDetail: 'No player in the databse matches with the name you provided. Please make sure you are passing in the player\'s popular name as the argument'
-        });
 
-        return;
-        }
-        res.send({
-          status: 200,
-          player: player
-        });
-      },(err) => {
-        res.status(400).send({
-          status: 400,
-          errorMessage: 'Unable to return data',
-          errorDetail: `Errro: ${err}`
-        });
+  Player.findOne({popularName: playerName}).then((player) => {
+    if(!player)
+    {
+      res.status(404).send({
+        status: 404,
+        errorMessage: 'Could not find specified player in database',
+        errorDetail: 'No player in the databse matches with the name you provided. Please make sure you are passing in the player\'s popular name as the argument'
+      });
+
+      return;
+    }
+    res.send({
+      status: 200,
+      player: player
+    });
+  },(err) => {
+    res.status(400).send({
+      status: 400,
+      errorMessage: 'Unable to return data',
+      errorDetail: `Errro: ${err}`
+    });
   });
 });
 
@@ -80,17 +79,19 @@ app.get('/results', (req, res) => {
   });
 });
 
-app.get('/results/:round', (req, res) => {
-  var round = req.params.round.toLowerCase();
-   Game.find({round: `${round}`}).then((Games) => {
+app.get('/results/:competition', (req, res) => {
+  var competition = req.params.competition.toLowerCase();
+
+  Game.find({competition: `${competition}`}).then((Games) => {
     if(!Games)
     {
       res.status(404).send({
         status: 404,
         errorMessage: 'Could not find speicifed result(s) in database',
-        errorDetail: `No games in the database with speicifed search ${round}`
+        errorDetail: `No games in the database with speicifed search ${competition}`
       });
-       return;
+
+      return;
     }res.send({
       status: 200,
       resultsCount: Games.length,
@@ -105,6 +106,21 @@ app.get('/results/:round', (req, res) => {
     });
   });
 });
+
+app.get('/general', (req, res) => {
+  General.find().then((doc) => {
+    res.send({
+      status: 200,
+      clubInfo: doc
+    });
+  }, (err) => {
+    res.status(400).send({
+      status: 400,
+      errorMessage: 'Unable to retrieve general information',
+      errorDetail: `Error: ${err}`
+    });
+  });
+ });
 
 // //Use this route to delete duplicates in players collection
 // app.delete('/players/:id', (req, res) => {

@@ -8,7 +8,7 @@ var Game = mongoose.model('Game', {
     trim: true
   },
 
-  round: {
+  competition: {
     type: String,
     required: true,
     minLength: 1,
