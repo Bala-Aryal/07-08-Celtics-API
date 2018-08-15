@@ -15,7 +15,10 @@ app.use(bodyParser.json());
 
 app.get('/players', (req, res) => {
   Player.find().then((players) => {
-    res.send({players});
+    res.send({
+      status: 200,
+      playersCount: players.length,
+      players: players});
   }, (err) => {
     res.status(400).send({
       status: 400,
