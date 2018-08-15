@@ -17,9 +17,9 @@ module.exports.addPlayers = () => {
     averageAssists: 3.1
   });
 
-  var allenOne = new Player ({
+  var allenone = new Player ({
     fullName: 'Tony Allen',
-    popularName: 'allenOne',
+    popularName: 'allenone',
     nationality: 'American',
     age: 36,
     dateOfBirth: 'January 11, 1982',
@@ -233,7 +233,7 @@ module.exports.addPlayers = () => {
     console.log(err);
   });
 
-  allenOne.save().then((doc) => {
+  allenone.save().then((doc) => {
     console.log(JSON.stringify(doc, undefined, 2));
   }, (err) => {
     console.log(err);
