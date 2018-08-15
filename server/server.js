@@ -13,7 +13,7 @@ var port = process.env.PORT || 3000;
 
 // fillPlayers.addPlayers();
 
-fillGames.addResults();
+// fillGames.addResults();
 
 app.use(bodyParser.json());
 
@@ -71,6 +71,32 @@ app.get('/results', (req, res) => {
       resultsCount: games.length,
       results: games
     });
+  }, (err) => {
+    res.status(400).send({
+      status: 400,
+      errorMessage: 'Unable to return data',
+      errorDetail: `Error: ${err}`
+    });
+  });
+});
+
+app.get('/results/:round', (req, res) => {
+  var competition = req.params.round.toLowerCase();
+   Game.find({competition: `${round}`}).then((Games) => {
+    if(!Games)
+    {
+      res.status(404).send({
+        status: 404,
+        errorMessage: 'Could not find speicifed result(s) in database',
+        errorDetail: `No games in the database with speicifed search ${round}`
+      });
+       return;
+    }res.send({
+      status: 200,
+      resultsCount: Games.length,
+      results: Games
+    });
+
   }, (err) => {
     res.status(400).send({
       status: 400,
