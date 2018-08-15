@@ -4,7 +4,7 @@ const Game = require('./../models/games.js').Game
 module.exports.addResults = () => {
   var gameOne = new Game({
     title: 'Boston Celtics vs. Atlanta Hawks Game One',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'Apr 20, 2008	',
     celticsPoints: 104,
@@ -16,7 +16,7 @@ module.exports.addResults = () => {
 
   var gameTwo = new Game({
     title: 'Boston Celtics vs. Atlanta Hawks Game Two',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'Apr 23, 2008	',
     celticsPoints: 96,
@@ -28,7 +28,7 @@ module.exports.addResults = () => {
 
   var gameThree = new Game({
     title: 'Atlanta Hawks vs. Boston Celtics Game Three',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'Apr 26, 2008	',
     celticsPoints: 93,
@@ -40,7 +40,7 @@ module.exports.addResults = () => {
 
   var gameFour = new Game({
     title: 'Atlanta Hawks vs. Boston Celtics Game Four',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'Apr 28, 2008	',
     celticsPoints: 92,
@@ -52,7 +52,7 @@ module.exports.addResults = () => {
 
   var gameFive = new Game({
     title: 'Boston Celtics vs. Atlanta Hawks Game Five',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'Apr 30, 2008	',
     celticsPoints: 110,
@@ -64,7 +64,7 @@ module.exports.addResults = () => {
 
   var gameSix = new Game({
     title: 'Atlanta Hawks vs. Boston Celtics Game Six',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'May 2, 2008',
     celticsPoints: 100,
@@ -76,7 +76,7 @@ module.exports.addResults = () => {
 
   var gameSeven = new Game({
     title: 'Boston Celtics vs. Atlanta Hawks Game Seven',
-    round: 'Eastern Conference First Round',
+    round: 'Eastern-Conference-First-Round',
     opponent: 'Atlanta Hawks',
     date: 'May 4, 2008',
     celticsPoints: 99,
@@ -88,7 +88,7 @@ module.exports.addResults = () => {
 
   var gameEight = new Game({
     title: 'Boston Celtics vs. Cleveland Cavaliers Game One',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 6, 2008',
     celticsPoints: 76,
@@ -100,7 +100,7 @@ module.exports.addResults = () => {
 
   var gameNine = new Game({
     title: 'Boston Celtics vs. Cleveland Cavaliers Game Two',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 8, 2008',
     celticsPoints: 89,
@@ -112,7 +112,7 @@ module.exports.addResults = () => {
 
   var gameTen = new Game({
     title: 'Cleveland Cavaliers vs. Boston Celtics Game Three',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 10, 2008',
     celticsPoints: 84,
@@ -124,7 +124,7 @@ module.exports.addResults = () => {
 
   var game11 = new Game({
     title: 'Cleveland Cavaliers vs. Boston Celtics Game Four',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 12, 2008',
     celticsPoints: 77,
@@ -136,7 +136,7 @@ module.exports.addResults = () => {
 
   var game12 = new Game({
     title: 'Boston Celtics vs. Cleveland Cavaliers Game Five',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 14, 2008',
     celticsPoints: 96,
@@ -148,7 +148,7 @@ module.exports.addResults = () => {
 
   var game13 = new Game({
     title: 'Cleveland Cavaliers vs. Boston Celtics Game Six',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 16, 2008',
     celticsPoints: 69,
@@ -160,7 +160,7 @@ module.exports.addResults = () => {
 
   var game14 = new Game({
     title: 'Boston Celtics vs. Cleveland Cavaliers Game Seven',
-    round: 'Eastern Conference Semifinals',
+    round: 'Eastern-Conference-Semifinals',
     opponent: 'Cleveland Cavaliers',
     date: 'May 18, 2008',
     celticsPoints: 97,
@@ -172,7 +172,7 @@ module.exports.addResults = () => {
 
   var game15 = new Game({
     title: 'Boston Celtics vs. Detroit Pistons Game One',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 20, 2008',
     celticsPoints: 88,
@@ -184,7 +184,7 @@ module.exports.addResults = () => {
 
   var game16 = new Game({
     title: 'Boston Celtics vs. Detroit Pistons Game Two',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 22, 2008',
     celticsPoints: 97,
@@ -196,7 +196,7 @@ module.exports.addResults = () => {
 
   var game17 = new Game({
     title: 'Detroit Pistons vs. Boston Celtics Game Three',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 24, 2008',
     celticsPoints: 94,
@@ -208,7 +208,7 @@ module.exports.addResults = () => {
 
   var game18 = new Game({
     title: 'Detroit Pistons vs. Boston Celtics Game Four',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 26, 2008',
     celticsPoints: 75,
@@ -220,7 +220,7 @@ module.exports.addResults = () => {
 
   var game19 = new Game({
     title: 'Boston Celtics vs. Detroit Pistons Game Five',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 28, 2008',
     celticsPoints: 106,
@@ -232,7 +232,7 @@ module.exports.addResults = () => {
 
   var game20 = new Game({
     title: 'Detroit Pistons vs. Boston Celtics Game Six',
-    round: 'Eastern Conference Finals',
+    round: 'Eastern-Conference-Finals',
     opponent: 'Detroit Pistons',
     date: 'May 30, 2008',
     celticsPoints: 89,
@@ -244,7 +244,7 @@ module.exports.addResults = () => {
 
   var game21 = new Game({
     title: 'Boston Celtics vs. Los Angeles Lakers Game One',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 5, 2008',
     celticsPoints: 98,
@@ -256,7 +256,7 @@ module.exports.addResults = () => {
 
   var game22 = new Game({
     title: 'Boston Celtics vs. Los Angeles Lakers Game Two',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 8, 2008',
     celticsPoints: 108,
@@ -268,7 +268,7 @@ module.exports.addResults = () => {
 
   var game23 = new Game({
     title: 'Los Angeles Lakers vs. Boston Celtics Game Three',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 10, 2008',
     celticsPoints: 81,
@@ -280,7 +280,7 @@ module.exports.addResults = () => {
 
   var game24 = new Game({
     title: 'Los Angeles Lakers vs. Boston Celtics Game Four',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 12, 2008',
     celticsPoints: 97,
@@ -292,7 +292,7 @@ module.exports.addResults = () => {
 
   var game25 = new Game({
     title: 'Los Angeles Lakers vs. Boston Celtics Game Five',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 15, 2008',
     celticsPoints: 98,
@@ -304,7 +304,7 @@ module.exports.addResults = () => {
 
   var game26 = new Game({
     title: 'Celtics	vs.	Los Angeles Lakers Game Six',
-    round: 'NBA Finals',
+    round: 'NBA-Finals',
     opponent: 'Los Angeles Lakers',
     date: 'Jun 17, 2008',
     celticsPoints: 131,
