@@ -1,5 +1,5 @@
 const mongoose = require('./../mongoose.js').mongoose;
-const Game = require('./../models/playoff-games.js').Game
+const Game = require('./../models/games.js').Game
 
 module.exports.addResults = () => {
   var gameOne = new Game({
