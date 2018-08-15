@@ -13,7 +13,7 @@ var port = process.env.PORT || 3000;
 
 // fillPlayers.addPlayers();
 
-// fillGames.addResults();
+fillGames.addResults();
 
 app.use(bodyParser.json());
 
