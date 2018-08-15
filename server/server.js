@@ -15,11 +15,16 @@ var port = process.env.PORT || 3000;
 
 // fillPlayers.addPlayers();
 
-fillGames.addResults();
+// fillGames.addResults();
 
 // fillGeneral.addGeneral();
 
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.render('home.hbs', {
+  });
+});
 
 app.get('/players', (req, res) => {
   Player.find().then((players) => {
