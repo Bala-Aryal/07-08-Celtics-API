@@ -81,7 +81,7 @@ app.get('/results', (req, res) => {
 });
 
 app.get('/results/:round', (req, res) => {
-  var competition = req.params.round.toLowerCase();
+  var round = req.params.round.toLowerCase();
    Game.find({competition: `${round}`}).then((Games) => {
     if(!Games)
     {
