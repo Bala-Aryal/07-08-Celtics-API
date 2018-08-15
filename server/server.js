@@ -4,12 +4,16 @@ const bodyParser = require('body-parser');
 
 const mongoose = require('./../database/mongoose.js').mongoose;
 const Player = require('./../database/models/player.js').Player;
+const Game = require('./../database/models/games.js').Game;
 const fillPlayers = require('./../database/initialize_database/fill_players.js');
+const fillGames = require('./../database/initialize_database/fill_results.js');
 
 var app = express();
 var port = process.env.PORT || 3000;
 
 // fillPlayers.addPlayers();
+
+fillGames.addResults();
 
 app.use(bodyParser.json());
 
@@ -60,16 +64,32 @@ app.get('/players/:name', (req, res) => {
   });
 });
 
-//Use this route to delete duplicates in players collection
-app.delete('/players/:id', (req, res) => {
-  var id = req.params.id;
-
-  Player.findByIdAndRemove(id).then((doc) => {
-    res.send(doc);
+app.get('/results', (req, res) => {
+  Game.find().then((games) => {
+    res.send({
+      status: 200,
+      resultsCount: games.length,
+      results: games
+    });
   }, (err) => {
-    res.send(err);
+    res.status(400).send({
+      status: 400,
+      errorMessage: 'Unable to return data',
+      errorDetail: `Error: ${err}`
+    });
   });
 });
+
+// //Use this route to delete duplicates in players collection
+// app.delete('/players/:id', (req, res) => {
+//   var id = req.params.id;
+//
+//   Player.findByIdAndRemove(id).then((doc) => {
+//     res.send(doc);
+//   }, (err) => {
+//     res.send(err);
+//   });
+// });
 
 
  app.listen(port,() => {
