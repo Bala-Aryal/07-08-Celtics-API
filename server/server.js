@@ -28,6 +28,13 @@ app.get('/players', (req, res) => {
   });
 });
 
+app.get('/players/:name', (req, res) => {
+  var playerName = req.params.name;
+   res.send({
+    name: playerName
+  });
+});
+
 
  app.listen(port,() => {
   console.log(`Server started up on port: ${port}`);
