@@ -82,4 +82,4 @@ var Player = mongoose.model('Player', {
 
 });
 
-module.exports.Player = {Player};
+module.exports.Player = Player;
