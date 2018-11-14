@@ -2,7 +2,7 @@
 
 A RESTful API that returns rich data about 2007-2008 champion Boston Celtics basketball team such as game results, fixtures, player details, and more information (Information in returned in JSON format).
 
- #*Usage*###base_url:`https://cryptic-taiga-72195.herokuapp.com/`
+ #*Usage*###base_url:`https://celtics.herokuapp.com/`
  
  ##Player information Boston Celtics API returns detailed information about all of the Celtics basketball players. Information such as player name, nationality, age, dateOfBirth, height, weight, jerseyNumber, position, averagePoints, averageRebound,and averageAssists is returned. You can get information about all players or about a specific player.
  
